@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>はじめてのWebページ | 練習用</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ヘッダー：サイトのタイトルとナビゲーション -->
+    <header class="header">
+      <div class="container">
+        <p class="logo">🌸今日はじめてのWebページ</p>
+        <nav class="nav">
+          <a href="#about">自己紹介</a>
+          <a href="#skills">できること</a>
+          <a href="#contact">お問い合わせ</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+      <!-- ヒーロー：最初に目に入る大きなエリア -->
+      <section class="hero">
+        <div class="container">
+          <h1>初めての練習ページ</h1>
+          <p class="hero-text">
+            これは練習用のシンプルなページです。<br />
+            HTMLで構造を、CSSで見た目を作っています。
+          </p>
+          <a class="button" href="#about">もっと見る</a>
+        </div>
+      </section>
+
+      <!-- 自己紹介セクション -->
+      <section id="about" class="section">
+        <div class="container">
+          <h2>自己紹介</h2>
+          <div class="card">
+            <p>
+              こんにちは！Webページ作りを始めたばかりです。
+              このページでは、見出し・段落・リンク・ボタンなど、
+              よく使う基本的なパーツを学べます。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- スキル一覧セクション -->
+      <section id="skills" class="section section-alt">
+        <div class="container">
+          <h2>これから覚えること</h2>
+          <ul class="skill-list">
+            <li>
+              <strong>HTML</strong>
+              <span>ページの骨組み（見出し、文章、画像など）</span>
+            </li>
+            <li>
+              <strong>CSS</strong>
+              <span>色・レイアウト・フォントなどのデザイン</span>
+            </li>
+            <li>
+              <strong>JavaScript</strong>
+              <span>ボタンを押したときの動き（次のステップ）</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- お問い合わせフォーム（練習用・送信はしません） -->
+      <section id="contact" class="section">
+        <div class="container">
+          <h2>お問い合わせ（練習用）</h2>
+          <form class="contact-form" onsubmit="handleSubmit(event)">
+            <label for="name">お名前</label>
+            <input type="text" id="name" name="name" placeholder="山田 太郎" required />
+
+            <label for="message">メッセージ</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="ここにメッセージを入力"
+              required
+            ></textarea>
+
+            <button type="submit" class="button button-full">送信する（練習）</button>
+          </form>
+          <p id="form-result" class="form-result" hidden></p>
+        </div>
+      </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 はじめてのWebページ — 練習用</p>
+      </div>
+    </footer>
+
+    <script>
+      function handleSubmit(event) {
+        event.preventDefault();
+        const name = document.getElementById("name").value;
+        const result = document.getElementById("form-result");
+        result.textContent = `${name} さん、メッセージを受け取りましたよ！（練習なので実際には送信されません）`;
+        result.hidden = false;
+        event.target.reset();
+      }
+    </script>
+  </body>
+</html>
