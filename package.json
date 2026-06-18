@@ -8,6 +8,8 @@
         "name": "noto-_page",
         "version": "1.0.0",
         "license": "MIT",
+        "url": "https://opensource.org/licenses/MIT",
+        "text": "Copyright (c) 2023,"
         "dependencies": {
           "cors": "^2.8.5",
           "dotenv": "^16.0.3",
