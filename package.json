@@ -10,15 +10,6 @@
         "license": "MIT",
         "url": "https://opensource.org/licenses/MIT",
         "text": "Copyright (c) 2023,"
-        "dependencies": {
-          "cors": "^2.8.5",
-          "dotenv": "^16.0.3",
-          "express": "^4.18.2",
-          "mongodb": "^6.0.0"
-        },
-        "devDependencies": {
-          "nodemon": "^3.0.1"
-        }
       },
       "node_modules/@mongodb-js/saslprep": {
         "version": "1.4.11",
