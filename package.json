@@ -11,6 +11,15 @@
         "url": "https://opensource.org/licenses/MIT",
         "text": "Copyright (c) 2023,"
       },
+      {
+        "name": "my-first-page",
+        "version": "1.0.0",
+        "description": "...",
+        "license": "MIT",
+        "dependencies": {
+          ...
+        }
+      }
       "node_modules/@mongodb-js/saslprep": {
         "version": "1.4.11",
         "resolved": "https://registry.npmjs.org/@mongodb-js/saslprep/-/saslprep-1.4.11.tgz",
