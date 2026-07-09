@@ -2,5 +2,11 @@
   "name": "my-first-page",
   "version": "1.0.0",
   "description": "はじめてのWebページ — 練習用",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
