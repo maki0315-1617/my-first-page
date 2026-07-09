@@ -9,7 +9,7 @@
         "version": "1.0.0",
         "license": "MIT",
         "url": "https://opensource.org/licenses/MIT",
-        "text": "Copyright (c) 2023,"
+        "text": "Copyright (c) 2023",
         "node_modules/noto-_page": {
           "name": "noto-_page",
           "version": "1.0.0",
@@ -23,7 +23,7 @@
           "description": "...",
           "license": "MIT",
           "dependencies": {
-            ...
+          "express": "^4.21.2"
           }
         },
       "node_modules/@mongodb-js/saslprep": {
