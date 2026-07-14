@@ -4,7 +4,9 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(express.static(__dirname));
+//app.use(express.static(__dirname));
+// 例：publicというフォルダの中にcssファイルを入れている場合
+app.use(express.static('public'));
 
 app.get("*", (_req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
