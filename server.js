@@ -1,17 +1,20 @@
-const express = require("express");
-const path = require("path");
-
+const express = require('express');
+const path = require('path'); // 💡 パスを扱うための標準モジュールを読み込む
 const app = express();
+
+// 💡 1. 静的ファイル（CSSや画像）のフォルダを絶対パスで指定する
+app.use(express.static(path.join(__dirname, 'public')));
+
+// 💡 2. トップページ（/）にアクセスがあったら、public内の index.html を返す
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// ローカル開発環境用の設定（Vercel上では不要ですが、手元で動かすために残します）
 const PORT = process.env.PORT || 3000;
-
-//app.use(express.static(__dirname));
-// 例：publicというフォルダの中にcssファイルを入れている場合
-app.use(express.static('public'));
-
-app.get("*", (_req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
-});
-
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
+
+// 💡 3. Vercelがこのサーバーを認識できるように、appを外部に出力する
+module.exports = app;
